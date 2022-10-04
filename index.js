@@ -16,7 +16,6 @@ var ddb = new AWS.DynamoDB.DocumentClient();
 
 app.use(bodyParser.json({ type: 'application/json' }))
 
-
 app.get('/todos', async function (req, res) {
   try {
     const result = await ddb.scan({
